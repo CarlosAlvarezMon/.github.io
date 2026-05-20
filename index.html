@@ -46,7 +46,7 @@ body{
     line-height:1.8;
 }
 
-/* CUSTOM CURSOR */
+/* CURSOR */
 
 .cursor{
     width:18px;
@@ -90,8 +90,8 @@ nav{
     width:100%;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,.78);
-    backdrop-filter:blur(16px);
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(18px);
     border-bottom:1px solid rgba(15,23,42,.06);
 }
 
@@ -106,15 +106,15 @@ nav{
 }
 
 .logo{
-    color:#0f172a;
     font-size:20px;
     font-weight:700;
+    color:#0f172a;
     letter-spacing:.4px;
 }
 
 nav ul{
     display:flex;
-    gap:30px;
+    gap:28px;
     list-style:none;
 }
 
@@ -139,7 +139,6 @@ nav a:hover{
     align-items:center;
     text-align:center;
     padding:40px;
-    color:#0f172a;
     position:relative;
 }
 
@@ -149,20 +148,31 @@ nav a:hover{
     width:900px;
     height:900px;
     background:radial-gradient(circle, rgba(14,165,233,.08), transparent 70%);
-    top:-300px;
-    right:-200px;
+    top:-250px;
+    right:-250px;
     z-index:-1;
 }
 
 .hero-content{
-    max-width:980px;
+    max-width:950px;
+}
+
+.profile-photo{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:35px;
+    border:6px solid rgba(255,255,255,.9);
+    box-shadow:0 20px 45px rgba(15,23,42,.12);
 }
 
 .hero h1{
     font-size:82px;
     line-height:1.02;
-    margin-bottom:25px;
+    margin-bottom:24px;
     font-weight:800;
+    color:#0f172a;
     letter-spacing:-3px;
 }
 
@@ -203,9 +213,9 @@ nav a:hover{
 }
 
 .btn-secondary{
-    border:1px solid rgba(15,23,42,.12);
-    color:#0f172a;
     background:white;
+    color:#0f172a;
+    border:1px solid rgba(15,23,42,.08);
 }
 
 .btn-secondary:hover{
@@ -213,7 +223,7 @@ nav a:hover{
     transform:translateY(-5px);
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
     padding:110px 0;
@@ -247,7 +257,7 @@ section{
 /* CARDS */
 
 .card{
-    background:rgba(255,255,255,.82);
+    background:rgba(255,255,255,.84);
     border:1px solid rgba(15,23,42,.06);
     border-radius:28px;
     padding:42px;
@@ -296,7 +306,6 @@ section{
     border-radius:24px;
     padding:35px;
     transition:.4s;
-    backdrop-filter:blur(12px);
 }
 
 .skill:hover{
@@ -315,12 +324,6 @@ section{
     color:#475569;
 }
 
-/* CONTACT */
-
-.contact-card p{
-    margin-bottom:12px;
-}
-
 /* FOOTER */
 
 footer{
@@ -329,21 +332,6 @@ footer{
     border-top:1px solid rgba(15,23,42,.06);
     color:#64748b;
     margin-top:60px;
-}
-
-/* ANIMATION */
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
 }
 
 /* RESPONSIVE */
@@ -359,7 +347,7 @@ footer{
     }
 
     .hero h1{
-        font-size:50px;
+        font-size:48px;
         letter-spacing:-2px;
     }
 
@@ -379,6 +367,11 @@ footer{
     .card,
     .skill{
         padding:28px;
+    }
+
+    .profile-photo{
+        width:140px;
+        height:140px;
     }
 
 }
@@ -405,6 +398,8 @@ Carlos Álvarez Monjaraz
 
 <ul>
 <li><a href="#perfil">Perfil</a></li>
+<li><a href="#educacion">Educación</a></li>
+<li><a href="#congresos">Congresos</a></li>
 <li><a href="#experiencia">Experiencia</a></li>
 <li><a href="#habilidades">Habilidades</a></li>
 <li><a href="#proyectos">Proyectos</a></li>
@@ -420,6 +415,8 @@ Carlos Álvarez Monjaraz
 <header class="hero">
 
 <div class="hero-content" data-aos="fade-up">
+
+<img src="foto.jpg" alt="Carlos Álvarez Monjaraz" class="profile-photo">
 
 <h1>
 Evaluación de proyectos, Planeación y Diseño Urbano
@@ -472,6 +469,108 @@ Enfoque analítico y orientado a resultados, con habilidades para la optimizaci�
 
 </section>
 
+<!-- EDUCACIÓN -->
+
+<section id="educacion">
+
+<div class="container">
+
+<h2 class="section-title" data-aos="fade-right">
+Educación
+</h2>
+
+<div class="card" data-aos="fade-up">
+
+<h3>
+Universidad Nacional Autónoma de México (UNAM)
+</h3>
+
+<span>
+Facultad de Arquitectura · Licenciatura en Urbanismo
+</span>
+
+<p>
+
+Ciudad Universitaria, Ciudad de México
+
+<br><br>
+
+Septiembre 2021 – Actual
+
+<br><br>
+
+98% de avance académico.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONGRESOS -->
+
+<section id="congresos">
+
+<div class="container">
+
+<h2 class="section-title" data-aos="fade-right">
+Congresos y Participación Académica
+</h2>
+
+<div class="card" data-aos="fade-up" data-aos-delay="100">
+
+<h3>
+XVI Congreso de Planificación y Ordenamiento Territorial
+</h3>
+
+<span>
+UNAM + ANPUD · Octubre 2022
+</span>
+
+<p>
+Asistente en el congreso “La enseñanza y la práctica profesional de la planificación y el ordenamiento territorial contemporáneo en América Latina y el Caribe: retos y realidades”.
+</p>
+
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="200">
+
+<h3>
+XXIII Congreso Nacional
+</h3>
+
+<span>
+Facultad de Arquitectura UNAM · Octubre 2023
+</span>
+
+<p>
+Participación como asistente en el congreso “Desarrollo urbano, entre la metrópolis y el barrio: teoría, políticas, género, historia y espacio público”.
+</p>
+
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="300">
+
+<h3>
+8° Congreso Nacional de Suelo Urbano
+</h3>
+
+<span>
+Oaxaca, México · Marzo 2025
+</span>
+
+<p>
+Participación como asistente en el congreso “Avanzando en la implementación de la Nueva Agenda Urbana en México: los retos de la integración entre territorio, ciudad y suelo urbano”.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- EXPERIENCIA -->
 
 <section id="experiencia">
@@ -489,7 +588,7 @@ Asistente Técnico – Coordinación de la Licenciatura en Urbanismo, UNAM
 </h3>
 
 <span>
-Febrero 2026 - Actual.
+Febrero 2026 - Actual
 </span>
 
 <p>
@@ -651,7 +750,7 @@ Ponente en las Jornadas de Participación Social en el Urbanismo y la Arquitectu
 Contacto
 </h2>
 
-<div class="card contact-card" data-aos="fade-up">
+<div class="card" data-aos="fade-up">
 
 <p>
 <strong>Correo:</strong>
