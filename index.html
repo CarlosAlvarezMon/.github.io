@@ -101,8 +101,8 @@ body{
     background:
 
     linear-gradient(
-    rgba(248,250,252,.88),
-    rgba(241,245,249,.92)
+    rgba(248,250,252,.84),
+    rgba(241,245,249,.88)
     ),
 
     url('Fondo.jpg');
@@ -230,7 +230,7 @@ nav a:hover{
 
 }
 
-/* FOTO */
+/* FOTO PERFIL */
 
 .profile-photo{
 
@@ -674,9 +674,67 @@ footer{
         display:none;
     }
 
+    /* NAV */
+
+    nav{
+
+        padding:0;
+
+    }
+
+    .nav-container{
+
+        padding:14px 0;
+
+        flex-direction:column;
+
+        gap:14px;
+
+    }
+
+    .logo{
+
+        font-size:17px;
+
+        text-align:center;
+
+    }
+
+    nav ul{
+
+        gap:12px;
+
+        font-size:12px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    nav a{
+
+        font-size:12px;
+
+    }
+
+    /* HERO */
+
+    .hero{
+
+        padding-top:210px;
+
+        min-height:auto;
+
+        padding-bottom:100px;
+
+    }
+
     .hero h1{
 
-        font-size:46px;
+        font-size:42px;
+
+        line-height:1.08;
 
         letter-spacing:-2px;
 
@@ -688,23 +746,26 @@ footer{
 
     }
 
-    nav ul{
+    .profile-photo{
 
-        gap:14px;
+        width:130px;
+        height:170px;
 
-        font-size:13px;
+        border-radius:22px;
 
-        flex-wrap:wrap;
-
-        justify-content:center;
+        margin-top:10px;
 
     }
+
+    /* TITLES */
 
     .section-title{
 
         font-size:34px;
 
     }
+
+    /* CARDS */
 
     .card,
     .skill{
@@ -713,12 +774,11 @@ footer{
 
     }
 
-    .profile-photo{
+    /* PROJECTS */
 
-    width:130px;
-    height:170px;
+    .project-content{
 
-    border-radius:22px;
+        padding:24px;
 
     }
 
@@ -991,8 +1051,6 @@ Proyectos Destacados
 
 <div class="grid">
 
-<!-- PROYECTO -->
-
 <div class="card project-card" data-aos="fade-up">
 
 <img src="farmacia1.jpg"
@@ -1037,6 +1095,14 @@ class="gallery-image">
 
 </div>
 
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- CONTACTO -->
@@ -1068,11 +1134,13 @@ Ciudad de México
 
 </div>
 
+</div>
+
 </section>
 
 <footer>
 
-© 2026 Urb. Carlos Álvarez Monjaraz
+© 2026 Carlos Álvarez Monjaraz
 
 </footer>
 
