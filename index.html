@@ -285,7 +285,7 @@ nav a:hover{
 
 }
 
-/* TEXTO */
+/* HERO LEFT */
 
 .mini-label{
 
@@ -490,6 +490,57 @@ nav a:hover{
 
 }
 
+/* STATS */
+
+.stats{
+
+    display:flex;
+
+    gap:22px;
+
+    margin-top:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.stat{
+
+    background:rgba(255,255,255,.80);
+
+    backdrop-filter:blur(14px);
+
+    border-radius:24px;
+
+    padding:24px;
+
+    min-width:180px;
+
+    box-shadow:
+    0 18px 40px rgba(15,23,42,.05);
+
+}
+
+.stat h3{
+
+    font-size:34px;
+
+    color:#0ea5e9;
+
+    margin-bottom:8px;
+
+}
+
+.stat p{
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    margin:0;
+
+}
+
 /* HERO RIGHT */
 
 .hero-right{
@@ -529,11 +580,9 @@ nav a:hover{
     box-shadow:
     0 35px 70px rgba(15,23,42,.14);
 
-    filter:contrast(1.03) saturate(1.02);
-
 }
 
-/* SOFTWARE ICONS */
+/* SOFTWARE */
 
 .software{
 
@@ -559,6 +608,19 @@ nav a:hover{
 
     animation:floatIcon 6s ease-in-out infinite;
 
+    transition:.4s ease;
+
+}
+
+.software:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.08);
+
+    box-shadow:
+    0 20px 45px rgba(14,165,233,.18);
+
 }
 
 .software img{
@@ -567,6 +629,14 @@ nav a:hover{
     height:55px;
 
     object-fit:contain;
+
+    transition:.4s ease;
+
+}
+
+.software:hover img{
+
+    transform:rotate(6deg);
 
 }
 
@@ -682,57 +752,6 @@ nav a:hover{
 
 }
 
-/* STATS */
-
-.stats{
-
-    display:flex;
-
-    gap:22px;
-
-    margin-top:50px;
-
-    flex-wrap:wrap;
-
-}
-
-.stat{
-
-    background:rgba(255,255,255,.80);
-
-    backdrop-filter:blur(14px);
-
-    border-radius:24px;
-
-    padding:24px;
-
-    min-width:180px;
-
-    box-shadow:
-    0 18px 40px rgba(15,23,42,.05);
-
-}
-
-.stat h3{
-
-    font-size:34px;
-
-    color:#0ea5e9;
-
-    margin-bottom:8px;
-
-}
-
-.stat p{
-
-    font-size:14px;
-
-    line-height:1.5;
-
-    margin:0;
-
-}
-
 /* SECCIONES */
 
 section{
@@ -796,32 +815,6 @@ section{
 
 }
 
-.card h3{
-
-    font-size:24px;
-
-    margin-bottom:12px;
-
-}
-
-.card span{
-
-    font-size:14px;
-
-    color:#64748b;
-
-}
-
-.card p{
-
-    margin-top:18px;
-
-    color:#475569;
-
-    line-height:1.8;
-
-}
-
 /* HABILIDADES */
 
 .skills{
@@ -843,9 +836,7 @@ section{
 
     border-radius:28px;
 
-    transition:
-    transform .3s ease,
-    box-shadow .3s ease;
+    transition:.3s ease;
 
     box-shadow:
     0 18px 40px rgba(15,23,42,.05);
@@ -915,9 +906,9 @@ section{
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(420px,1fr));
+    repeat(auto-fit,minmax(480px,1fr));
 
-    gap:30px;
+    gap:34px;
 
 }
 
@@ -932,9 +923,7 @@ section{
     box-shadow:
     0 20px 45px rgba(15,23,42,.06);
 
-    transition:
-    transform .3s ease,
-    box-shadow .3s ease;
+    transition:.3s ease;
 
 }
 
@@ -968,11 +957,115 @@ section{
 
 }
 
+.project-category{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    background:rgba(14,165,233,.10);
+
+    color:#0284c7;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.project-location{
+
+    display:block;
+
+    margin-top:8px;
+
+    margin-bottom:18px;
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
 .project-content p{
 
     line-height:1.8;
 
     color:#475569;
+
+}
+
+.project-features{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+
+    margin-top:24px;
+
+    margin-bottom:24px;
+
+}
+
+.feature{
+
+    background:#f8fbfd;
+
+    border:1px solid rgba(15,23,42,.05);
+
+    padding:14px;
+
+    border-radius:18px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#334155;
+
+    line-height:1.5;
+
+}
+
+.feature i{
+
+    color:#0ea5e9;
+
+    margin-right:8px;
+
+}
+
+.project-tools{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:10px;
+
+}
+
+.project-tools span{
+
+    padding:10px 14px;
+
+    border-radius:30px;
+
+    background:#eef6fb;
+
+    color:#0369a1;
+
+    font-size:12px;
+
+    font-weight:700;
 
 }
 
@@ -1064,12 +1157,6 @@ footer{
 
     }
 
-    .hero{
-
-        padding-top:140px;
-
-    }
-
     .profile-wrap{
 
         width:340px;
@@ -1085,30 +1172,8 @@ footer{
         display:none;
     }
 
-    .hero{
-
-        padding-top:120px;
-
-    }
-
     .hero h1{
-
         font-size:52px;
-
-        letter-spacing:-3px;
-
-    }
-
-    .hero h2{
-
-        font-size:20px;
-
-    }
-
-    .hero p{
-
-        font-size:16px;
-
     }
 
     .profile-wrap{
@@ -1118,42 +1183,16 @@ footer{
 
     }
 
-    .software{
-
-        width:70px;
-        height:70px;
-
-    }
-
-    .software img{
-
-        width:38px;
-        height:38px;
-
-    }
-
     .float-card{
-
         display:none;
-
-    }
-
-    .section-title{
-
-        font-size:38px;
-
     }
 
     .projects{
-
         grid-template-columns:1fr;
-
     }
 
-    .stats{
-
-        flex-direction:column;
-
+    .project-features{
+        grid-template-columns:1fr;
     }
 
 }
@@ -1164,10 +1203,7 @@ footer{
 
 <body>
 
-<!-- BACKGROUND -->
-
 <div class="bg"></div>
-
 <div class="grid"></div>
 
 <div class="blob blob1"></div>
@@ -1203,8 +1239,6 @@ Carlos Álvarez Monjaraz
 
 <div class="hero-container">
 
-<!-- LEFT -->
-
 <div data-aos="fade-right">
 
 <div class="mini-label">
@@ -1237,9 +1271,8 @@ Urbanismo · Planeación Territorial · Diseño Urbano · SIG
 
 <p>
 
-Transformando el territorio mediante análisis espacial,
-diseño urbano y planeación estratégica enfocada
-en dinámicas urbanas contemporáneas.
+Urbanista especializado en análisis espacial,
+planeación territorial y representación cartográfica.
 
 </p>
 
@@ -1265,13 +1298,6 @@ class="btn btn-secondary"
 target="_blank">
 
 Descargar CV
-
-</a>
-
-<a href="#contacto"
-class="btn btn-secondary">
-
-Contacto
 
 </a>
 
@@ -1323,7 +1349,7 @@ Herramientas SIG y análisis espacial
 
 </div>
 
-<!-- RIGHT -->
+<!-- FOTO -->
 
 <div class="hero-right"
 data-aos="fade-left">
@@ -1332,8 +1358,6 @@ data-aos="fade-left">
 
 <img src="Foto.jpg"
 class="profile">
-
-<!-- SOFTWARE ICONS -->
 
 <div class="software software1">
 <img src="Logo Qgis.png">
@@ -1358,8 +1382,6 @@ class="profile">
 <div class="software software6">
 <img src="Logo PS.png">
 </div>
-
-<!-- FLOATING LABELS -->
 
 <div class="float-card card1">
 
@@ -1399,65 +1421,17 @@ Análisis Espacial
 
 <div class="container">
 
-<h2 class="section-title"
-data-aos="fade-up">
+<h2 class="section-title">
 
 Perfil Profesional
 
 </h2>
 
-<div class="card"
-data-aos="fade-up">
+<div class="card">
 
 <p>
 
-Urbanista en formación con experiencia en análisis territorial, evaluación de proyectos urbanos y planeación estratégica. Manejo de herramientas SIG, análisis espacial y representación cartográfica aplicada a dinámicas urbanas contemporáneas. Desarrollo de diagnósticos urbanos, análisis multicriterio y propuestas de diseño urbano con enfoque técnico y territorial.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EDUCACION -->
-
-<section id="educacion">
-
-<div class="container">
-
-<h2 class="section-title"
-data-aos="fade-up">
-
-Educación
-
-</h2>
-
-<div class="card"
-data-aos="fade-up">
-
-<h3>
-
-Universidad Nacional Autónoma de México
-
-</h3>
-
-<span>
-
-Facultad de Arquitectura · Licenciatura en Urbanismo
-
-</span>
-
-<p>
-
-Ciudad Universitaria, CDMX
-<br>
-
-Septiembre 2021 – Actual
-<br>
-
-98% de avance académico
+Urbanista en formación con experiencia en análisis territorial, evaluación de proyectos urbanos y planeación estratégica. Manejo de herramientas SIG, análisis espacial y representación cartográfica aplicada a dinámicas urbanas contemporáneas.
 
 </p>
 
@@ -1473,8 +1447,7 @@ Septiembre 2021 – Actual
 
 <div class="container">
 
-<h2 class="section-title"
-data-aos="fade-up">
+<h2 class="section-title">
 
 Habilidades Técnicas
 
@@ -1482,8 +1455,7 @@ Habilidades Técnicas
 
 <div class="skills">
 
-<div class="skill"
-data-aos="fade-up">
+<div class="skill">
 
 <div class="skill-top">
 
@@ -1503,21 +1475,18 @@ style="width:90%;">
 
 <p>
 
-QGIS · ArcGIS 
+QGIS · ArcGIS · análisis espacial · cartografía temática · modelación territorial.
+
 </p>
-</p>
-Análisis espacial, geoprocesamiento, generación de cartografía temática, modelación territorial y análisis multicriterio.
-</p>
+
 </div>
 
-<div class="skill"
-data-aos="fade-up"
-data-aos-delay="100">
+<div class="skill">
 
 <div class="skill-top">
 
 <strong>
-Análisis Espacial y Estadístico
+Análisis Territorial
 </strong>
 
 <i class="fa-solid fa-chart-column"></i>
@@ -1532,22 +1501,18 @@ style="width:85%;">
 
 <p>
 
-GeoDa · Excel · Stata 
+GeoDa · Excel · análisis urbano · estadística espacial · evaluación territorial.
+
 </p>
-</p>
-Análisis exploratorio de datos espaciales, econometría básica, estadística descriptiva e inferencial aplicada a estudios urbanos y evaluación de proyectos.
-</p>
-   
+
 </div>
 
-<div class="skill"
-data-aos="fade-up"
-data-aos-delay="200">
+<div class="skill">
 
 <div class="skill-top">
 
 <strong>
-Diseño Urbano y Representación
+Diseño Urbano
 </strong>
 
 <i class="fa-solid fa-city"></i>
@@ -1562,11 +1527,10 @@ style="width:82%;">
 
 <p>
 
-AutoCAD · Paquetería Adobe · SketchUp
+AutoCAD · Illustrator · Photoshop · representación gráfica urbana.
+
 </p>
-</p>
-Elaboración de planos técnicos, modelado tridimensional, representación gráfica de propuestas de diseño urbano.
-</p>
+
 </div>
 
 </div>
@@ -1581,8 +1545,7 @@ Elaboración de planos técnicos, modelado tridimensional, representación gráf
 
 <div class="container">
 
-<h2 class="section-title"
-data-aos="fade-up">
+<h2 class="section-title">
 
 Proyectos Destacados
 
@@ -1590,12 +1553,19 @@ Proyectos Destacados
 
 <div class="projects">
 
-<div class="project"
-data-aos="fade-up">
+<!-- PROYECTO 1 -->
+
+<div class="project">
 
 <img src="farmacia1.jpg">
 
 <div class="project-content">
+
+<div class="project-category">
+
+Diseño Urbano y Paisaje
+
+</div>
 
 <h3>
 
@@ -1603,35 +1573,153 @@ Farmacia Viviente
 
 </h3>
 
+<span class="project-location">
+
+Xochimilco · Ciudad de México
+
+</span>
+
 <p>
 
-Diagnóstico territorial, análisis normativo y propuesta urbano-paisajística desarrollada en Xochimilco mediante herramientas SIG y análisis espacial.
+Diagnóstico territorial, análisis normativo y propuesta urbano-paisajística mediante herramientas SIG y análisis espacial.
 
 </p>
 
+<div class="project-tools">
+
+<span>QGIS</span>
+<span>AutoCAD</span>
+<span>Urbanismo</span>
+
+</div>
+
 </div>
 
 </div>
 
-<div class="project"
-data-aos="fade-up"
-data-aos-delay="100">
+<!-- PROYECTO 2 -->
+
+<div class="project">
 
 <img src="farmacia2.jpg">
 
 <div class="project-content">
 
-<h3>
+<div class="project-category">
 
 Planeación Territorial
 
+</div>
+
+<h3>
+
+Evaluación Territorial y Urbana
+
 </h3>
+
+<span class="project-location">
+
+Ciudad de México
+
+</span>
 
 <p>
 
-Evaluación urbana y análisis territorial para proyectos urbanos y regionales, integrando cartografía temática y criterios de planeación estratégica.
+Evaluación urbana y análisis territorial para proyectos urbanos y regionales integrando cartografía temática y análisis espacial.
 
 </p>
+
+<div class="project-tools">
+
+<span>ArcGIS</span>
+<span>Cartografía</span>
+<span>Análisis Espacial</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- NUEVO PROYECTO -->
+
+<div class="project">
+
+<img src="Rediseño intersección.jpg">
+
+<div class="project-content">
+
+<div class="project-category">
+
+Eje de Movilidad y Espacio Público
+
+</div>
+
+<h3>
+
+Rediseño de la intersección
+Corina–San Pedro–Cuauhtémoc
+
+</h3>
+
+<span class="project-location">
+
+Inmediaciones de la Preparatoria No. 6 UNAM · CDMX
+
+</span>
+
+<p>
+
+Propuesta de rediseño integral del cruce urbano a partir del análisis de complejidad vial y los resultados obtenidos mediante participación comunitaria con población estudiantil.
+
+La intervención reorganiza el espacio público para mejorar la movilidad peatonal, reducir conflictos viales y optimizar el funcionamiento del nodo urbano.
+
+</p>
+
+<div class="project-features">
+
+<div class="feature">
+
+<i class="fa-solid fa-person-walking"></i>
+
+Ampliación de banquetas y accesibilidad universal
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-road"></i>
+
+Implementación de orejas y radios normativos
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-tree"></i>
+
+Infraestructura verde y recuperación de espacio público
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-bus"></i>
+
+Ordenamiento vial y ascenso-descenso
+
+</div>
+
+</div>
+
+<div class="project-tools">
+
+<span>AutoCAD</span>
+<span>Diseño Urbano</span>
+<span>Movilidad</span>
+<span>Espacio Público</span>
+
+</div>
 
 </div>
 
@@ -1649,15 +1737,13 @@ Evaluación urbana y análisis territorial para proyectos urbanos y regionales, 
 
 <div class="container">
 
-<h2 class="section-title"
-data-aos="fade-up">
+<h2 class="section-title">
 
 Contacto
 
 </h2>
 
-<div class="card"
-data-aos="fade-up">
+<div class="card">
 
 <p>
 
@@ -1704,8 +1790,6 @@ Coyoacán, Ciudad de México
 © 2026 Urb. Carlos Álvarez Monjaraz
 
 </footer>
-
-<!-- AOS -->
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
