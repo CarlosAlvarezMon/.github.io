@@ -925,22 +925,63 @@ section{
 
 }
 
-.project img{
-
+.project > img,
+.carousel-container {
     width:100%;
-
     aspect-ratio:1.414/1;
-
     object-fit:cover;
-
+    display:block;
     transition:.5s;
-
 }
 
-.project:hover img{
-
+.project:hover > img,
+.project:hover .carousel-track img {
     transform:scale(1.03);
+}
 
+/* CAROUSEL ESPECÍFICO */
+.carousel-container {
+    position:relative;
+    overflow:hidden;
+}
+
+.carousel-track {
+    display:flex;
+    width:100%;
+    height:100%;
+    transition:transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-track img {
+    width:100%;
+    height:100%;
+    flex-shrink:0;
+    object-fit:cover;
+    transition:transform 0.5s;
+}
+
+.carousel-indicators {
+    position:absolute;
+    bottom:16px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+    z-index:10;
+}
+
+.dot {
+    width:10px;
+    height:10px;
+    background:rgba(255,255,255,0.4);
+    border-radius:50%;
+    transition:0.3s ease;
+    cursor:pointer;
+}
+
+.dot.active {
+    background:white;
+    transform:scale(1.2);
 }
 
 .project-content{
@@ -1750,6 +1791,97 @@ Proyectos Destacados
 
 <div class="project">
 
+    <div class="carousel-container">
+        <div class="carousel-track" id="acapulco-track">
+            <img src="Acapulco Propuestas.jpg" alt="Acapulco Propuestas">
+            <img src="Acapulco Isocronas.jpg" alt="Acapulco Isocronas">
+            <img src="Acapulco Estrategias.jpg" alt="Acapulco Estrategias">
+        </div>
+        <div class="carousel-indicators">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div class="project-content">
+
+        <div class="project-category">
+
+            Planeación Metropolitana
+
+        </div>
+
+        <h3>
+
+            Mejoramiento y Recuperación Urbana: Equipamiento y Servicios Ecosistémicos
+
+        </h3>
+
+        <span class="project-location">
+
+            Zona Metropolitana de Acapulco · Guerrero
+
+        </span>
+
+        <p>
+
+            Análisis de cobertura y cálculo de déficit de equipamiento urbano (salud, educación y recreación) tras el impacto del huracán Otis. La propuesta define estrategias de localización y dotación fundamentadas en el marco normativo (LGAHOTDU, NOM-002-SEDATU) e información sociodemográfica (INEGI) para fortalecer la resiliencia metropolitana.
+
+        </p>
+
+        <div class="project-features">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-map-location-dot"></i>
+
+                Análisis de Isocronas y Cobertura
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-scale-balanced"></i>
+
+                Aplicación Normativa (SEDATU / PMDU)
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-house-medical-flag"></i>
+
+                Equipamiento Resiliente y Servicios Ecosistémicos
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                Viabilidad y Valores Unitarios de Construcción
+
+            </div>
+
+        </div>
+
+        <div class="project-tools">
+
+            <span>QGIS</span>
+            <span>Planeación Metropolitana</span>
+            <span>Gestión de Riesgo</span>
+            <span>Análisis Espacial</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="project">
+
 <img src="farmacia1.jpg">
 
 <div class="project-content">
@@ -2111,6 +2243,33 @@ AOS.init({
     once:true
 
 });
+
+/* LÓGICA DEL CARRUSEL DE ACAPULCO */
+let currentSlideIndex = 0;
+const track = document.getElementById('acapulco-track');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = 3;
+
+function moveCarousel() {
+    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    if(track) {
+        track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            if(index === currentSlideIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+}
+
+// Iniciar rotación automática cada 3.5 segundos
+setInterval(moveCarousel, 3500);
 
 /* FUNCIONES JAVASCRIPT PARA CONTROLAR EL MODAL */
 function openPdfModal(pdfUrl, docTitle) {
