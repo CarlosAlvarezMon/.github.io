@@ -121,7 +121,6 @@ body{
 
     animation:gridMove 24s linear infinite;
     
-    /* OPTIMIZACIÓN DE RENDIMIENTO */
     will-change: transform;
 
 }
@@ -142,7 +141,6 @@ body{
 
     animation:float 10s ease-in-out infinite;
     
-    /* OPTIMIZACIÓN DE RENDIMIENTO */
     will-change: transform;
 
 }
@@ -261,7 +259,6 @@ nav a:hover{
 
     align-items:center;
 
-    /* ESPACIADO INFERIOR REDUCIDO */
     padding:120px 0 50px; 
 
 }
@@ -607,7 +604,6 @@ nav a:hover{
 
     animation:floatIcon 6s ease-in-out infinite;
     
-    /* OPTIMIZACIÓN DE RENDIMIENTO */
     will-change: transform;
 
     transition:.4s ease;
@@ -715,7 +711,6 @@ nav a:hover{
 
     animation:floatCard 5s ease-in-out infinite;
     
-    /* OPTIMIZACIÓN DE RENDIMIENTO */
     will-change: transform;
 
     font-size:13px;
@@ -757,11 +752,10 @@ nav a:hover{
 
 }
 
-/* SECCIONES */
+/* SECCIONES GENERALES */
 
 section{
 
-    /* ESPACIADO ENTRE APARTADOS REDUCIDO */
     padding:50px 0; 
 
 }
@@ -819,6 +813,62 @@ section{
 
     transform:translateY(-4px);
 
+}
+
+/* ESTILOS PARA LISTAS DE EXPERIENCIA/EDUCACIÓN */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card-header h3 {
+    font-size: 22px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.card-header .date-label {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.card-location {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-list {
+    list-style: none;
+}
+
+.card-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.card-list li::before {
+    content: "•";
+    color: #0ea5e9;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
 }
 
 /* HABILIDADES */
@@ -953,7 +1003,6 @@ section{
     transform:scale(1.03);
 }
 
-/* CAROUSEL ESPECÍFICO */
 .carousel-container {
     position:relative;
     overflow:hidden;
@@ -1482,6 +1531,8 @@ Carlos Álvarez Monjaraz
 <ul>
 
 <li><a href="#perfil">Perfil</a></li>
+<li><a href="#educacion">Educación</a></li>
+<li><a href="#experiencia">Experiencia</a></li>
 <li><a href="#habilidades">Habilidades</a></li>
 <li><a href="#proyectos">Proyectos</a></li>
 <li><a href="#constancias">Constancias</a></li>
@@ -1693,6 +1744,85 @@ Urbanista en formación con experiencia en análisis territorial, evaluación de
 
 </div>
 
+</section>
+
+<section id="educacion">
+    <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Educación</h2>
+        <div class="card">
+            <div class="card-header">
+                <h3>Universidad Nacional Autónoma de México (UNAM)</h3>
+                <span class="date-label">Septiembre 2021 – Actual (Sept. 2026)</span>
+            </div>
+            <div class="card-location">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Facultad de Arquitectura, Licenciatura en Urbanismo | Ciudad Universitaria, CDMX
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experiencia">
+    <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Experiencia Profesional</h2>
+
+        <div class="card" style="margin-bottom: 30px;">
+            <div class="card-header">
+                <h3>Comisión de Recursos Naturales y Desarrollo Rural (CORENADR)</h3>
+                <span class="date-label">Enero 2024 – Junio 2024</span>
+            </div>
+            <div class="card-location">
+                <i class="fa-solid fa-briefcase"></i>
+                Xochimilco, Ciudad de México
+            </div>
+            <ul class="card-list">
+                <li>Anteproyecto: Farmacia Viviente para la comunidad Santiago Tepalcatlalpan, Xochimilco.</li>
+                <li>Análisis y evaluación de aptitud territorial en suelo de conservación de la CDMX.</li>
+                <li>Identificación de Áreas Naturales Protegidas (ANP) y Áreas de Valor Ambiental (AVA) aplicables al polígono de intervención.</li>
+                <li>Revisión y análisis del marco normativo y ambiental urbano, incluyendo la Ley Ambiental de Protección a la Tierra en la CDMX, la LGAHOTDU 2016-RNAP-2019 y la NOM-001-SEDATU-2021.</li>
+                <li>Elaboración de cartografía temática mediante Sistemas de Información Geográfica (SIG).</li>
+                <li>Integración de criterios de diseño paisajístico con enfoque técnico y bajo impacto.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="margin-bottom: 30px;">
+            <div class="card-header">
+                <h3>Taller de Diseño y Gestión + Ciudades A.C. (Becario)</h3>
+                <span class="date-label">Mayo 2023 – Diciembre 2025</span>
+            </div>
+            <div class="card-location">
+                <i class="fa-solid fa-briefcase"></i>
+                Acapulco de Juárez, Guerrero – Ciudad de México
+            </div>
+            <ul class="card-list">
+                <li>Proyecto: "Acapulco Se Transforma Contigo: Infraestructura de Saneamiento en el Municipio de Acapulco de Juárez, Guerrero" (Convenio CAPAMA - CONAGUA).</li>
+                <li>Elaboración de diagnóstico urbano con enfoque en variables sociales de saneamiento como sustento técnico.</li>
+                <li>Análisis y aplicación del marco normativo urbano, ambiental y sectorial aplicable.</li>
+                <li>Elaboración de cartografía temática mediante Sistemas de Información Geográfica (SIG).</li>
+                <li>Levantamiento y análisis de datos en campo para el diagnóstico de la red de inversión.</li>
+                <li>Análisis de complejidad y diseño de isocronas para determinar la viabilidad de inversión.</li>
+                <li>Cálculo de indicadores de rentabilidad (VPN, TIR y Relación Beneficio-Costo).</li>
+                <li>Evaluación preliminar de riesgos asociados a la ejecución y operación del proyecto.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Facultad de Arquitectura, UNAM (Asistente Técnico)</h3>
+                <span class="date-label">Febrero 2026 – Actual</span>
+            </div>
+            <div class="card-location">
+                <i class="fa-solid fa-briefcase"></i>
+                Coordinación de la Licenciatura en Urbanismo | Ciudad Universitaria, CDMX
+            </div>
+            <ul class="card-list">
+                <li>Participación en el proceso de acreditación del Plan de Estudios ante la Acreditadora no Universitaria de la Educación Superior de la Arquitectura y Disciplinas del Espacio Habitado (ANPADEH A.C.).</li>
+                <li>Actualización y homologación de programas analíticos de asignatura conforme a lineamientos de evaluación académica y pertinencia institucional.</li>
+                <li>Integración, sistematización y control documental de evidencias para el proceso de acreditación.</li>
+                <li>Análisis de indicadores de calidad educativa y coherencia curricular.</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <section id="habilidades">
@@ -2282,7 +2412,6 @@ function updateCarousel() {
     }
 }
 
-// Iniciar rotación automática cada 3.5 segundos
 setInterval(moveCarousel, 3500);
 
 /* FUNCIONES JAVASCRIPT PARA CONTROLAR EL MODAL */
